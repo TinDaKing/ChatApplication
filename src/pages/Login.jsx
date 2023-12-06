@@ -1,7 +1,6 @@
 import React from "react";
-import Add from "../img/addAvatar.png";
 
-const Register = () => {
+const Login = () => {
     return (
 
         <div className="formContainer">
@@ -21,4 +20,4 @@ const Register = () => {
     );
 }
 
-export default Register;
+export default Login;
