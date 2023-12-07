@@ -8,7 +8,7 @@ import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
     const [err, setErr] = useState(false);
-    // const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     // const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -42,19 +42,19 @@ const Register = () => {
                             email,
                             photoURL: downloadURL,
                         });
-                        // //create empty user chats on firestore
+                        //create empty user chats on firestore
                         // await setDoc(doc(db, "userChats", res.user.uid), {});
                         // navigate("/");
                     } catch (err) {
                         console.log(err);
                         setErr(true);
-                        // setLoading(false);
+                        setLoading(false);
                     }
                 });
             });
         } catch (err) {
             setErr(true);
-            // setLoading(false);
+            setLoading(false);
         }
     };
 
@@ -73,12 +73,12 @@ const Register = () => {
                         <span>Add an avatar</span>
                     </label>
                     <button >Sign up</button>
-                    {/* {loading && "Uploading and compressing the image please wait..."} */}
-                    {/* {err && <span>Something went wrong</span>} */}
+                    {loading && "Uploading and compressing the image please wait..."}
+                    {err && <span>Something went wrong</span>}
                 </form>
-                {/* <p>
-                    You do have an account? <Link to="/register">Login</Link>
-                </p> */}
+                <p>
+                    {/* You do have an account? <Link to="/register">Login</Link> */}
+                </p>
             </div>
         </div>
     );
