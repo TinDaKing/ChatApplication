@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Search from "./Search";
-import Chats from "./Chats";
+import Navbar from "./Navbar"
+import Search from "./Search"
+import Chats from "./Chats"
 
 const Sidebar = () => {
     return (
@@ -11,6 +11,6 @@ const Sidebar = () => {
             <Chats />
         </div>
     );
-}
+};
 
 export default Sidebar;
