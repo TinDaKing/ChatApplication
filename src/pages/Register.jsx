@@ -42,7 +42,8 @@ const Register = () => {
                             email,
                             photoURL: downloadURL,
                         });
-                        // create empty user chats on firestore
+
+                        //create empty user chats on firestore
                         await setDoc(doc(db, "userChats", res.user.uid), {});
                         navigate("/");
                     } catch (err) {
@@ -72,12 +73,12 @@ const Register = () => {
                         <img src={Add} alt="" />
                         <span>Add an avatar</span>
                     </label>
-                    <button >Sign up</button>
+                    <button disabled={loading}>Sign up</button>
                     {loading && "Uploading and compressing the image please wait..."}
                     {err && <span>Something went wrong</span>}
                 </form>
                 <p>
-                    {/* You do have an account? <Link to="/register">Login</Link> */}
+                    You do have an account? <Link to="/register">Login</Link>
                 </p>
             </div>
         </div>
